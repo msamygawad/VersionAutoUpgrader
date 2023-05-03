@@ -15,29 +15,31 @@ def check_server_and_run_last():
         print("No files found in the Server directory.")
         return None
     latest_version = os.path.basename(server_files[-1])
-    #get list length
-    list_len = len(server_files)
-    preLast_version = ""
-    if list_len > 1:
-        preLast_version = os.path.join(os.getcwd(),os.path.basename(server_files[-2])) 
+
     if latest_version != running_version:
-        shutil.copy2(server_files[-1], os.getcwd())           
-        print("Most recent version is running now")
+        shutil.copy2(server_files[-1], os.getcwd())        
+        print("Moving control to the latest version")
         path = os.path.join(os.getcwd(),latest_version)
         path_arg = ["python",path]
         os.execvp("python",path_arg)
         sys.exit()
-      
+    
+    preLast_version = ""
+    local_files =  glob.glob("Proj_Version*.py")
+    if len(local_files) > 1:
+        local_files.sort()
+        preLast_version = local_files[0]
     return preLast_version
 
 
 def check_local_for_old_versions(older_file_name):
     if os.path.exists(older_file_name):
+        print("")
         print("Found this old version --> (" + os.path.basename(older_file_name) + ") in the local folder" )
         os.remove(older_file_name)
         print("This old version --> (" + os.path.basename(older_file_name) + ") was deleted successfully" )
     else :
-        print("No older files found, Local folder have only the last version")
+        print("You are running the latest version")
        
 def main():
     older_file_name = check_server_and_run_last() 
