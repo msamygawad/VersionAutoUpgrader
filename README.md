@@ -4,7 +4,7 @@ Proceduers to try
 
 1- Open CMD in local folder
 
-2- runt the only py file exist
+2- run the only py file exist
 
   3- if it is not the latest one compared to the files in Server folder, it will be removed and latest file exist in server will be copied to local folder and run 
 	
