@@ -19,3 +19,9 @@ ToDo:
 2- add safety mechanism to avoid erros incase versions are named by floating numbers
 
 3- add method in the versioning upgrade function to autmatically follow the same file nameing protocol (ie: "Prject ver2" or "product_V2" ...etc).
+
+4- add mechanism to detect that local folder have newer version than the server. it will automatically add that newer version to the server and delet any older version in the local folder
+
+5- convert files to be .exe extension to enhance file integrity for windows platforms
+
+
