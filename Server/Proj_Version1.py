@@ -22,7 +22,7 @@ def check_server_and_run_last():
         path = os.path.join(os.getcwd(),latest_version)
         path_arg = ["python",path]
         os.execvp("python",path_arg)
-        sys.exit()
+        #sys.exit()
     
     preLast_version = ""
     local_files =  glob.glob("Proj_Version*.py")
