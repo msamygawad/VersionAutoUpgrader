@@ -10,7 +10,7 @@ Proceduers to try
 	
   4- if it is the latest version, then it will run noramlly
   
-Note that: the programs are samples and the main function of them is to count from 1 to the version name
+Note that: the programs are samples and the main function of them is to count from 1 to the version number
 
 ToDo:
 
